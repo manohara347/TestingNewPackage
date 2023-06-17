@@ -16,13 +16,8 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "TestingNewPackage",
-            dependencies: []),
-        .testTarget(
-            name: "TestingNewPackageTests",
-            dependencies: ["TestingNewPackage"]),
+        .binaryTarget(name: "TestingNewPackage",
+                      url: "https://localhost:8080/TestingFramework-1.0.0.zip",
+                      checksum: "ca529d42d00a31284e2e1fd4e472c174f82418ed3dc69c506bc125cf412f6da4")
     ]
 )
